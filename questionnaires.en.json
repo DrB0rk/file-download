@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "language": "en",
+  "title": "AMS Studio Participant Questionnaires (EN)",
+  "fetchedAt": "2026-08-17T00:00:00Z",
+  "slots": [
+    {
+      "id": "q0",
+      "title": "New participant intake",
+      "questions": [
+        { "id": 0, "text": "Which device are you using for this participant?", "type": "constrained-choice", "options": [] },
+        { "id": 1, "text": "What is their participant id?", "type": "open" },
+        { "id": 2, "text": "What do they want to be called (name/nickname)?", "type": "open" },
+        { "id": 3, "text": "What is the electrode distance for this participant (cm)?", "type": "open" },
+        {
+          "id": 4,
+          "text": "Are they alright with having their picture taken (photo will be deleted after the study ends)?",
+          "type": "constrained-choice",
+          "options": ["Yes, they're ok with it", "No, they prefer an emoji"]
+        },
+        {
+          "id": 5,
+          "text": "Take their participant photo",
+          "type": "camera",
+          "dependencies": [
+            { "questionId": 4, "condition": { "type": "equals", "value": "Yes, they're ok with it" } }
+          ]
+        },
+        {
+          "id": 6,
+          "text": "Which emoji would you like to use instead?",
+          "type": "constrained-choice",
+          "options": ["🙂", "😎", "🤩", "😊", "😇", "🤓", "🧠", "🌟", "🔥", "🌈", "🎤", "🎧", "🎨", "🚀", "🌻", "🍀", "⚡️", "💙"],
+          "dependencies": [
+            { "questionId": 4, "condition": { "type": "equals", "value": "No, they prefer an emoji" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q1",
+      "title": "Session 1 — demographics & baseline",
+      "questions": [
+        { "id": 1, "text": "What is your age?", "type": "range", "range": [1, 100], "rangeLabels": ["1 year", "100 years"] },
+        {
+          "id": 2,
+          "text": "What is your gender?",
+          "type": "constrained-choice",
+          "options": ["Male", "Female", "Non-binary / third gender", "Prefer not to say"]
+        },
+        { "id": 3, "text": "What is your height (cm)?", "type": "range", "range": [120, 220], "rangeLabels": ["120cm", "220cm"] },
+        { "id": 4, "text": "What is your weight (kg)?", "type": "range", "range": [30, 150], "rangeLabels": ["30kg", "150kg"] },
+        {
+          "id": 5,
+          "text": "What is your highest level of education?",
+          "type": "constrained-choice",
+          "options": [
+            "No formal education",
+            "Primary education",
+            "Secondary education (VMBO, HAVO/VWO, MBO or equivalent)",
+            "University degree (HBO, WO)",
+            "Doctorate (PhD or equivalent)",
+            "Prefer not to say"
+          ]
+        },
+        {
+          "id": 6,
+          "text": "What's your current employment status?",
+          "type": "multi-choice-open",
+          "options": [
+            "Employed full time", "Employed part time", "Student",
+            "Unemployed (in-between jobs)", "Unemployed (e.g. due to disability)",
+            "Self-employed", "Prefer not to say", "Other"
+          ]
+        },
+        {
+          "id": 7,
+          "text": "How many hours did you sleep last night?",
+          "type": "range",
+          "range": [0, 15],
+          "rangeLabels": ["0h", "15h"]
+        },
+        {
+          "id": 8,
+          "text": "How often do you consume alcoholic beverages?",
+          "type": "constrained-choice",
+          "options": ["Never", "Once per month or less", "2 to 4 times per month", "2-3 times per week", "4+ times per week"]
+        },
+        {
+          "id": 9,
+          "text": "In the past month have you experienced a major life stressor?",
+          "type": "constrained-choice-open",
+          "options": ["No", "Yes, namely:"]
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "title": "Session 2 — mood rating",
+      "questions": [
+        {
+          "id": 100,
+          "text": "Please indicate your mood on the 5 sliders below.",
+          "type": "section-header"
+        },
+        { "id": 0, "text": "At this moment I have positive feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 1, "text": "At this moment I have negative feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 2, "text": "At this moment I feel mentally overloaded", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 3, "text": "At this moment I feel tension in my body", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 4, "text": "At this moment I feel stressed", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] }
+      ]
+    },
+    {
+      "id": "q3",
+      "title": "Session 3 — recovery & follow-up",
+      "questions": [
+        {
+          "id": 100,
+          "text": "Section 1 — Recovery",
+          "type": "section-header"
+        },
+        { "id": 0, "text": "How well did you recover since the previous session?", "type": "range", "range": [0, 7], "rangeLabels": ["not at all", "completely"] },
+        { "id": 1, "text": "How physically rested do you feel right now?", "type": "range", "range": [0, 7], "rangeLabels": ["exhausted", "fully rested"] },
+        {
+          "id": 101,
+          "text": "Section 2 — Follow-up",
+          "type": "section-header"
+        },
+        { "id": 2, "text": "Did anything noteworthy happen since the last session?", "type": "constrained-choice-open", "options": ["No", "Yes, namely:"] },
+        { "id": 3, "text": "How would you rate your overall wellbeing?", "type": "range", "range": [0, 10], "rangeLabels": ["very poor", "excellent"] }
+      ]
+    },
+    {
+      "id": "q4",
+      "title": "Session 4 — final mood rating",
+      "questions": [
+        {
+          "id": 1000,
+          "text": "Please indicate your mood on the 5 sliders below.",
+          "type": "section-header"
+        },
+        { "id": 1001, "text": "At this moment I have positive feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 1002, "text": "At this moment I have negative feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 1003, "text": "At this moment I feel mentally overloaded", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 1004, "text": "At this moment I feel tension in my body", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
+        { "id": 1005, "text": "At this moment I feel stressed", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] }
+      ]
+    }
+  ]
+}
