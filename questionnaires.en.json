@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "language": "en",
   "title": "AMS Studio Participant Questionnaires (EN)",
-  "fetchedAt": "2026-08-17T00:00:00Z",
+  "fetchedAt": "2026-08-18T00:00:00Z",
   "slots": [
     {
       "id": "q0",
@@ -39,111 +39,338 @@
     },
     {
       "id": "q1",
-      "title": "Session 1 — demographics & baseline",
+      "title": "Session 1 — Baseline & hair cortisol",
+      "introText": "There are occasional minor and major challenges in daily life that can constantly reoccur, to which one can sometimes not get used to, and which can be more or less burdensome. Please tick whether and how strongly you have been affected by the following annoyances or inconveniences OVER THE PAST MONTH.",
       "questions": [
-        { "id": 1, "text": "What is your age?", "type": "range", "range": [1, 100], "rangeLabels": ["1 year", "100 years"] },
+        { "id": 10000, "text": "Section 1 — Daily life stressors (past month)", "type": "section-header" },
+        { "id": 10001, "text": "A major life stressor (e.g. loss of a loved one, getting fired, moving house)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10002, "text": "Health problems (e.g. diseases, chronic conditions)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10003, "text": "Financial restrictions (e.g. low income, installments)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10004, "text": "Dissatisfaction with education/occupation (e.g. examinations, work overload)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10005, "text": "Difficulties with (secondary) employment (e.g. compatibility with school/college, high responsibility, noise pollution)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10006, "text": "Dissatisfaction with housing situation (e.g. noise, small flat)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10007, "text": "Frequent conflicts with close persons (family, household, friends, partner)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10008, "text": "Frequent conflicts with other persons (colleagues, fellow students, neighbours)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10009, "text": "Difficulties with social obligations (e.g. associations, organisations)", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+        { "id": 10010, "text": "Another burden/stressor not yet mentioned", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very much"] },
+
+        { "id": 20000, "text": "Section 2 — Emotion regulation (ERSS)\nWhen something happens that makes me feel an emotion that I want to change, I manage how I am feeling by trying to…", "type": "section-header" },
+        { "id": 20001, "text": "Think about the situation differently", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20002, "text": "Shift what I am thinking about to something different", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20003, "text": "Accept the experience", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20004, "text": "Not show how I feel", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20005, "text": "Think of solutions to the event that caused the emotion", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20006, "text": "Relax my muscles", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20007, "text": "Capture and hold on to the emotion I am feeling at the moment", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+        { "id": 20008, "text": "Repeatedly analyze the situation that made me feel this way", "type": "range", "range": [1, 5], "rangeLabels": ["not at all", "very often"] },
+
+        { "id": 30000, "text": "Section 3 — Thoughts after unpleasant situations (CERQ)\nIn unpleasant, stressful, or threatening situations…", "type": "section-header" },
+        { "id": 30001, "text": "I feel that I am the one who is responsible for what has happened", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"] },
+        { "id": 30002, "text": "I keep thinking about how terrible it is what I have experienced", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"] },
+        { "id": 30003, "text": "I feel that others are responsible for what has happened", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"] },
+
+        { "id": 40000, "text": "Section 4 — Health consciousness (HCS)\nThe questions in this section ask you how important your health is in day-to-day life. We are interested in how much your health influences the choices you make every day.", "type": "section-header" },
+        { "id": 40001, "text": "In the past month… I was generally attentive to my inner feelings about my health", "type": "range", "range": [1, 5], "rangeLabels": ["does not describe me", "describes me extremely well"] },
+        { "id": 40002, "text": "In the past month… I reflected about my health", "type": "range", "range": [1, 5], "rangeLabels": ["does not describe me", "describes me extremely well"] },
+        { "id": 40003, "text": "In the past month… I noticed how I felt physically as I went through the day", "type": "range", "range": [1, 5], "rangeLabels": ["does not describe me", "describes me extremely well"] },
+
+        { "id": 50000, "text": "Section 5 — Hair cortisol (sample consent and styling)\nThe following questions are relevant for the analysis of the hair sample.", "type": "section-header" },
         {
-          "id": 2,
-          "text": "What is your gender?",
+          "id": 50001,
+          "text": "Will you donate a hair sample?",
           "type": "constrained-choice",
-          "options": ["Male", "Female", "Non-binary / third gender", "Prefer not to say"]
+          "options": ["Yes", "Yes — I already did this in the hair salon at Lowlands Science and give permission to share that sample with the researchers of Stress Roulette", "No"]
         },
-        { "id": 3, "text": "What is your height (cm)?", "type": "range", "range": [120, 220], "rangeLabels": ["120cm", "220cm"] },
-        { "id": 4, "text": "What is your weight (kg)?", "type": "range", "range": [30, 150], "rangeLabels": ["30kg", "150kg"] },
         {
-          "id": 5,
-          "text": "What is your highest level of education?",
+          "id": 50002,
+          "text": "Has your hair been dyed, bleached, or permed in the previous 6 months?",
           "type": "constrained-choice",
-          "options": [
-            "No formal education",
-            "Primary education",
-            "Secondary education (VMBO, HAVO/VWO, MBO or equivalent)",
-            "University degree (HBO, WO)",
-            "Doctorate (PhD or equivalent)",
-            "Prefer not to say"
+          "options": ["Yes", "No"],
+          "dependencies": [
+            { "questionId": 50001, "condition": { "type": "notEquals", "value": "No" } }
           ]
         },
         {
-          "id": 6,
-          "text": "What's your current employment status?",
-          "type": "multi-choice-open",
-          "options": [
-            "Employed full time", "Employed part time", "Student",
-            "Unemployed (in-between jobs)", "Unemployed (e.g. due to disability)",
-            "Self-employed", "Prefer not to say", "Other"
+          "id": 50003,
+          "text": "How long ago did you do this?",
+          "type": "constrained-choice",
+          "options": ["<1 month ago", "1-2 months ago", "2-3 months ago", ">3 months ago"],
+          "dependencies": [
+            { "questionId": 50001, "condition": { "type": "notEquals", "value": "No" } },
+            { "questionId": 50002, "condition": { "type": "equals", "value": "Yes" } }
           ]
         },
         {
-          "id": 7,
-          "text": "How many hours did you sleep last night?",
-          "type": "range",
-          "range": [0, 15],
-          "rangeLabels": ["0h", "15h"]
-        },
-        {
-          "id": 8,
-          "text": "How often do you consume alcoholic beverages?",
+          "id": 50004,
+          "text": "How often do you normally wash your hair a week?",
           "type": "constrained-choice",
-          "options": ["Never", "Once per month or less", "2 to 4 times per month", "2-3 times per week", "4+ times per week"]
+          "options": ["<1 time", "1-2 times a week", "2-3 times a week", ">3 times a week"]
         },
         {
-          "id": 9,
-          "text": "In the past month have you experienced a major life stressor?",
+          "id": 50005,
+          "text": "Did you use corticosteroids during the past three months (e.g. prednisone, advair, nasonex, symbicort, fluticasone, avamys, pulmicort, rhinocort, beclometasone, triamcinolon, daktacort, hydrocortisone)?",
           "type": "constrained-choice-open",
           "options": ["No", "Yes, namely:"]
+        },
+        {
+          "id": 50006,
+          "text": "What kind of corticosteroids did you use?",
+          "type": "multi-choice",
+          "options": [
+            "Tablets",
+            "Inhalation",
+            "Cream/ointment on scalp",
+            "Cream/ointment elsewhere on the body, namely:",
+            "Nasal spray",
+            "Injection in joint(s) (e.g. knee, hip, or shoulder)",
+            "Other, namely:"
+          ],
+          "dependencies": [
+            { "questionId": 50005, "condition": { "type": "equals", "value": "Yes, namely:" } }
+          ]
+        },
+        {
+          "id": 50007,
+          "text": "Where on the body did you apply the cream/ointment?",
+          "type": "open",
+          "dependencies": [
+            { "questionId": 50005, "condition": { "type": "equals", "value": "Yes, namely:" } },
+            { "questionId": 50006, "condition": { "type": "containsAny", "value": ["Cream/ointment elsewhere on the body, namely:"] } }
+          ]
+        },
+        {
+          "id": 50008,
+          "text": "Other corticosteroid (please specify)",
+          "type": "open",
+          "dependencies": [
+            { "questionId": 50005, "condition": { "type": "equals", "value": "Yes, namely:" } },
+            { "questionId": 50006, "condition": { "type": "containsAny", "value": ["Other, namely:"] } }
+          ]
+        },
+        {
+          "id": 50009,
+          "text": "Do you use hormonal/long-lasting contraception (condoms not included)?",
+          "type": "constrained-choice-open",
+          "options": [
+            "No",
+            "Yes, contraceptive pills: ethinylestradiol/levonorgestrel or ethinylestradiol/desogestrel",
+            "Yes, other contraceptive pill (name):",
+            "Yes, hormonal intrauterine device (Mirena)",
+            "Yes, copper intrauterine device (coil)",
+            "Other, (please specify):"
+          ]
         }
       ]
     },
     {
       "id": "q2",
-      "title": "Session 2 — mood rating",
+      "title": "Mood scale — How do you feel RIGHT NOW?",
+      "introText": "Tap 'Next' once at each session you record a mood for. The session label is captured automatically on submit.",
       "questions": [
         {
-          "id": 100,
-          "text": "Please indicate your mood on the 5 sliders below.",
-          "type": "section-header"
+          "id": 60000,
+          "text": "Stress — bipolar anchors: -5 very relaxed/calm/composed/comfortable vs +5 very nervous/tense/anxious/stressed",
+          "type": "range",
+          "range": [-5, 5],
+          "rangeLabels": ["very relaxed / calm / composed / comfortable", "very nervous / tense / anxious / stressed"]
         },
-        { "id": 0, "text": "At this moment I have positive feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 1, "text": "At this moment I have negative feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 2, "text": "At this moment I feel mentally overloaded", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 3, "text": "At this moment I feel tension in my body", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 4, "text": "At this moment I feel stressed", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] }
+        {
+          "id": 60001,
+          "text": "Arousal — bipolar anchors: -5 very sluggish/tired/sleepy/dull vs +5 very active/energetic/alert/bright",
+          "type": "range",
+          "range": [-5, 5],
+          "rangeLabels": ["very sluggish / tired / sleepy / dull", "very active / energetic / alert / bright"]
+        }
       ]
     },
     {
       "id": "q3",
-      "title": "Session 3 — recovery & follow-up",
+      "title": "End questionnaire — intervention interest, demographics, sleep & substance use",
+      "introText": "People often encounter stressful situations in everyday life, but they are not always easy to manage effectively. As part of another study from our research team, we are offering you the opportunity to sign up for a brief online program after Lowlands designed to help you cope with everyday stress more effectively.",
       "questions": [
+        { "id": 70000, "text": "Section 1 — 5-day stress-management program (after Lowlands)\nFor five consecutive days, you will receive a short daily questionnaire. You will reflect on a stressful experience you have had, how you responded, and what you might do differently in the future. At the end of the 5-day program, you will receive a summary of your reflections. You will then be guided through developing a personalised action plan for managing similar situations the following week or in the future. The online program will take place one week after Lowlands.", "type": "section-header" },
+        { "id": 70001, "text": "Participating in this program is attractive to me", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
+        { "id": 70002, "text": "Participating in this program would be helpful for me to manage daily stress", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
+        { "id": 70003, "text": "People important to me would approve of me doing this program", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
+        { "id": 70004, "text": "Most people who matter to me would think participating in this program is a good idea", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
+        { "id": 70005, "text": "People similar to me would participate in this program", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
+        { "id": 70006, "text": "I am confident that I could participate in this program", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
+        { "id": 70007, "text": "Participating in this program would be easy for me", "type": "range", "range": [1, 5], "rangeLabels": ["strongly disagree", "strongly agree"] },
         {
-          "id": 100,
-          "text": "Section 1 — Recovery",
-          "type": "section-header"
+          "id": 70008,
+          "text": "Can we use your email address to contact you after Lowlands with more information about this program?",
+          "type": "constrained-choice",
+          "options": ["No", "Yes"]
         },
-        { "id": 0, "text": "How well did you recover since the previous session?", "type": "range", "range": [0, 7], "rangeLabels": ["not at all", "completely"] },
-        { "id": 1, "text": "How physically rested do you feel right now?", "type": "range", "range": [0, 7], "rangeLabels": ["exhausted", "fully rested"] },
         {
-          "id": 101,
-          "text": "Section 2 — Follow-up",
-          "type": "section-header"
+          "id": 70009,
+          "text": "I intend to participate in this program/intervention",
+          "type": "range",
+          "range": [1, 5],
+          "rangeLabels": ["strongly disagree", "strongly agree"],
+          "dependencies": [
+            { "questionId": 70008, "condition": { "type": "equals", "value": "Yes" } }
+          ]
         },
-        { "id": 2, "text": "Did anything noteworthy happen since the last session?", "type": "constrained-choice-open", "options": ["No", "Yes, namely:"] },
-        { "id": 3, "text": "How would you rate your overall wellbeing?", "type": "range", "range": [0, 10], "rangeLabels": ["very poor", "excellent"] }
-      ]
-    },
-    {
-      "id": "q4",
-      "title": "Session 4 — final mood rating",
-      "questions": [
         {
-          "id": 1000,
-          "text": "Please indicate your mood on the 5 sliders below.",
-          "type": "section-header"
+          "id": 70010,
+          "text": "Could you expand on why you do or do not wish to participate?",
+          "type": "open",
+          "dependencies": [
+            { "questionId": 70008, "condition": { "type": "equals", "value": "Yes" } }
+          ]
         },
-        { "id": 1001, "text": "At this moment I have positive feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 1002, "text": "At this moment I have negative feelings", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 1003, "text": "At this moment I feel mentally overloaded", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 1004, "text": "At this moment I feel tension in my body", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] },
-        { "id": 1005, "text": "At this moment I feel stressed", "type": "range", "range": [0, 100], "rangeLabels": ["not at all", "very much"] }
+
+        { "id": 80000, "text": "Section 2 — Demographics\nAlmost done! Finally, we'd like a bit of background information on your life, and the state in which you arrived at our experiment.", "type": "section-header" },
+        { "id": 80001, "text": "What is your age?", "type": "range", "range": [16, 80], "rangeLabels": ["16", "80"] },
+        {
+          "id": 80002,
+          "text": "Which of the following options applies to you the best?",
+          "type": "constrained-choice-open",
+          "options": ["Woman", "Man", "Non-binary or genderfluid", "I choose to identify as:"]
+        },
+        {
+          "id": 80003,
+          "text": "What sex were you assigned at birth (for example, on your birth certificate)?",
+          "type": "constrained-choice",
+          "options": ["Woman", "Man", "Sex could not be determined/registered (also known as intersex)", "I don't know", "Prefer not to answer"]
+        },
+        { "id": 80004, "text": "What is your height (cm)?", "type": "range", "range": [50, 300], "rangeLabels": ["50 cm", "300 cm"] },
+        { "id": 80005, "text": "What is your weight (kg)?", "type": "range", "range": [30, 200], "rangeLabels": ["30 kg", "200 kg"] },
+        {
+          "id": 80006,
+          "text": "What's your current employment status? (multiple answers possible)",
+          "type": "multi-choice",
+          "options": ["Employed", "Student", "Unemployed", "Not on the job market (e.g. gap year, retired, homemaker)"]
+        },
+        {
+          "id": 80007,
+          "text": "How many hours per week do you do paid work?",
+          "type": "range",
+          "range": [0, 80],
+          "rangeLabels": ["0 h", "80 h"],
+          "dependencies": [
+            { "questionId": 80006, "condition": { "type": "containsAny", "value": ["Employed", "Student"] } }
+          ]
+        },
+
+        { "id": 90000, "text": "Section 3 — Work/study exhaustion (BAT)\nLikert 1-5 (never, rarely, sometimes, often, always). Skip if you don't do paid work or study.", "type": "section-header" },
+        { "id": 90001, "text": "At work/study, I feel mentally exhausted", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"], "dependencies": [
+          { "questionId": 80006, "condition": { "type": "containsAny", "value": ["Employed", "Student"] } },
+          { "questionId": 80007, "condition": { "type": "notEquals", "value": "0" } }
+        ] },
+        { "id": 90002, "text": "I struggle to find any enthusiasm for my work/study", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"], "dependencies": [
+          { "questionId": 80006, "condition": { "type": "containsAny", "value": ["Employed", "Student"] } },
+          { "questionId": 80007, "condition": { "type": "notEquals", "value": "0" } }
+        ] },
+        { "id": 90003, "text": "When I'm working/studying, I have trouble concentrating", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"], "dependencies": [
+          { "questionId": 80006, "condition": { "type": "containsAny", "value": ["Employed", "Student"] } },
+          { "questionId": 80007, "condition": { "type": "notEquals", "value": "0" } }
+        ] },
+        { "id": 90004, "text": "At work/study, I may overact unintentionally", "type": "range", "range": [1, 5], "rangeLabels": ["never", "always"], "dependencies": [
+          { "questionId": 80006, "condition": { "type": "containsAny", "value": ["Employed", "Student"] } },
+          { "questionId": 80007, "condition": { "type": "notEquals", "value": "0" } }
+        ] },
+
+        { "id": 100000, "text": "Section 4 — Sleep & substance use", "type": "section-header" },
+        { "id": 100001, "text": "How many hours did you sleep last night?", "type": "range", "range": [0, 15], "rangeLabels": ["0 h", "15 h"] },
+        {
+          "id": 100002,
+          "text": "Which substances have you used since waking? (multiple answers possible)",
+          "type": "multi-choice",
+          "options": [
+            "None",
+            "Alcohol",
+            "Nicotine",
+            "Caffeine",
+            "Hash or weed",
+            "MDMA/ecstasy (XTC)",
+            "Laughing gas",
+            "Cocaine",
+            "Ketamine",
+            "3MMC or other cathinones",
+            "Sleep medication or sedatives",
+            "Speed",
+            "Magic mushrooms / truffles / LSD / 2C-B or other psychedelics",
+            "GHB",
+            "ADHD medication"
+          ]
+        },
+        {
+          "id": 100003,
+          "text": "Did you ever smoke cigarettes, cigars, pipe or other tobacco products daily?",
+          "type": "constrained-choice-open",
+          "options": ["No, I never smoked", "Yes, I used to smoke", "Yes"]
+        },
+        {
+          "id": 100004,
+          "text": "How many years ago did you quit?",
+          "type": "open",
+          "dependencies": [
+            { "questionId": 100003, "condition": { "type": "equals", "value": "Yes, I used to smoke" } }
+          ]
+        },
+        {
+          "id": 100005,
+          "text": "For how many years in total did you smoke?",
+          "type": "open",
+          "dependencies": [
+            { "questionId": 100003, "condition": { "type": "notEquals", "value": "No, I never smoked" } }
+          ]
+        },
+        {
+          "id": 100006,
+          "text": "How many cigarettes have you smoked since waking up?",
+          "type": "range",
+          "range": [0, 50],
+          "rangeLabels": ["0", "50"],
+          "dependencies": [
+            { "questionId": 100003, "condition": { "type": "equals", "value": "Yes" } }
+          ]
+        },
+        {
+          "id": 100007,
+          "text": "How many cigarettes do you smoke per week?",
+          "type": "range",
+          "range": [0, 700],
+          "rangeLabels": ["0", "700"],
+          "dependencies": [
+            { "questionId": 100003, "condition": { "type": "equals", "value": "Yes" } }
+          ]
+        },
+        {
+          "id": 100008,
+          "text": "How often do you consume alcoholic beverages?",
+          "type": "constrained-choice-open",
+          "options": [
+            "Never",
+            "Once per month or less",
+            "2 to 4 times per month",
+            "2 to 3 times a week",
+            "4 times a week or more"
+          ]
+        },
+        {
+          "id": 100009,
+          "text": "How many glasses of alcoholic beverage have you consumed since waking?",
+          "type": "range",
+          "range": [0, 40],
+          "rangeLabels": ["0", "40"],
+          "dependencies": [
+            { "questionId": 100008, "condition": { "type": "notEquals", "value": "Never" } }
+          ]
+        },
+        {
+          "id": 100010,
+          "text": "How many glasses of alcoholic beverage do you consume in a typical drinking day? (in standard glasses)",
+          "type": "range",
+          "range": [0, 150],
+          "rangeLabels": ["0", "150"],
+          "dependencies": [
+            { "questionId": 100008, "condition": { "type": "notEquals", "value": "Never" } }
+          ]
+        },
+        { "id": 110000, "text": "You are all done! Thanks so much for participating, you have earned your bragging rights as HEADLINER on Lowlands' smallest stage!", "type": "section-header" }
       ]
     }
   ]
