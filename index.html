@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Install StudioSattelite</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #f7f7f8;
+            --fg: #1c1c1e;
+            --card: #ffffff;
+            --accent: #007aff;
+            --accent-hover: #0a84ff;
+            --muted: #6e6e73;
+            --border: rgba(0, 0, 0, 0.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #000000;
+                --fg: #f5f5f7;
+                --card: #1c1c1e;
+                --accent: #0a84ff;
+                --accent-hover: #409cff;
+                --muted: #98989d;
+                --border: rgba(255, 255, 255, 0.1);
+            }
+        }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 40px 32px;
+            max-width: 420px;
+            width: 100%;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .icon {
+            width: 88px;
+            height: 88px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, #5856d6, #af52de);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(88, 86, 214, 0.3);
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            letter-spacing: -0.5px;
+        }
+        .version {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0 0 24px;
+            font-weight: 500;
+        }
+        .description {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0 0 32px;
+        }
+        .install-btn {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.15s ease, transform 0.1s ease;
+            font-family: inherit;
+        }
+        .install-btn:hover { background: var(--accent-hover); }
+        .install-btn:active { transform: scale(0.98); }
+        .footer {
+            margin-top: 24px;
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+        .footer kbd {
+            background: var(--border);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, "SF Mono", Menlo, monospace;
+            font-size: 11px;
+        }
+        .note {
+            margin-top: 16px;
+            padding: 12px;
+            background: rgba(255, 149, 0, 0.1);
+            border-radius: 10px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">📡</div>
+        <h1>StudioSattelite</h1>
+        <p class="version">Version 1.0</p>
+        <p class="description">
+            Internal test build of the StudioSattelite iPad app.
+            Development-signed with the AMS Studio team certificate.
+        </p>
+        <a class="install-btn" href="itms-services://?action=download-manifest&url=https://drb0rk.github.io/file-download/manifest.plist">
+            Install on this iPad
+        </a>
+        <div class="note">
+            <strong>Tap the button above on the iPad you want to install on.</strong>
+            iOS will show an install sheet; after install, trust the developer profile in
+            Settings → General → VPN & Device Management.
+        </div>
+        <p class="footer">
+            Direct IPA: <a href="https://drb0rk.github.io/file-download/StudioSattelite.ipa" style="color: var(--accent);">StudioSattelite.ipa</a><br>
+            Requires device to be registered on team <kbd>L34UB8AH3J</kbd>
+        </p>
+    </div>
+</body>
+</html>
